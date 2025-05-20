@@ -1,3 +1,5 @@
+test test test
+
 1. Open Docker App
 
 2. On your souce code go to docker-compose.yml
