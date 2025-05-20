@@ -1,0 +1,1 @@
+ALTER TABLE "producttable" ADD COLUMN "cost" numeric(10, 2) NOT NULL;

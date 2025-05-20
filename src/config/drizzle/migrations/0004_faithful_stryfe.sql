@@ -1,0 +1,1 @@
+ALTER TABLE "orderusertable" ADD COLUMN "currentpayment" numeric(10, 2);

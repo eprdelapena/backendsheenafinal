@@ -1,0 +1,1 @@
+ALTER TABLE "orderusertable" ADD COLUMN "province" varchar(255);

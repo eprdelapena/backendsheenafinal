@@ -1,0 +1,1 @@
+ALTER TABLE "producttable" ADD COLUMN "isshow" boolean DEFAULT true NOT NULL;

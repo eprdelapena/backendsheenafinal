@@ -1,0 +1,58 @@
+services:
+  postgres:
+    image: postgres
+    container_name: onlineshop_container
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dbchicberry
+    ports:
+      - "5434:5432"
+    volumes:
+      - backendsheena_onlineshop_local_data:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: 12345
+    ports:
+      - "5051:80"
+    depends_on:
+      - postgres
+
+volumes:
+  backendsheena_onlineshop_local_data:
+    external: true
+#if port in use run this command
+# sudo lsof -iTCP -sTCP:LISTEN -n -P
+
+# to kill
+#sudo kill -9 376 <id number>
+
+# version: '3'
+# services:
+#   postgres:
+#     image: postgres
+#     container_name: onlineshop_container
+#     environment:
+#       POSTGRES_USER: admin
+#       POSTGRES_PASSWORD: password
+#       POSTGRES_DB: dbchicberry
+#     ports:
+#       - "5432:5432"
+#     volumes:
+#       - onlineshop_local_data:/var/lib/postgresql/data
+#   pgadmin:
+#     image: dpage/pgadmin4
+#     container_name: pgadmin_container
+#     environment:
+#       PGADMIN_DEFAULT_EMAIL: admin@admin.com
+#       PGADMIN_DEFAULT_PASSWORD: password
+#     ports:
+#       - "5050:80"
+#     depends_on:
+#       - postgres
+# volumes:
+#   onlineshop_local_data:
+

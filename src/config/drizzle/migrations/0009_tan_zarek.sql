@@ -1,0 +1,1 @@
+ALTER TYPE "public"."eaccounttype" ADD VALUE 'admin_secretary' BEFORE 'admin_viewer';

@@ -1,0 +1,805 @@
+{
+  "id": "36fac352-dfa9-4472-b9c1-568f64e67f34",
+  "prevId": "bb9f0609-f929-40eb-b8e4-edd8b5fcf1ec",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.expensetable": {
+      "name": "expensetable",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "expenseid": {
+          "name": "expenseid",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "username": {
+          "name": "username",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "expense": {
+          "name": "expense",
+          "type": "numeric(10, 2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "expensedate": {
+          "name": "expensedate",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "memo": {
+          "name": "memo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.ordertable": {
+      "name": "ordertable",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "orderid": {
+          "name": "orderid",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "productid": {
+          "name": "productid",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "username": {
+          "name": "username",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "price": {
+          "name": "price",
+          "type": "numeric(10, 2)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "orderquantity": {
+          "name": "orderquantity",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "orderdate": {
+          "name": "orderdate",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "quantityxxs": {
+          "name": "quantityxxs",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantityxs": {
+          "name": "quantityxs",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantitys": {
+          "name": "quantitys",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantitym": {
+          "name": "quantitym",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantityl": {
+          "name": "quantityl",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantityxl": {
+          "name": "quantityxl",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantityxxl": {
+          "name": "quantityxxl",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity5": {
+          "name": "quantity5",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity55": {
+          "name": "quantity55",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity6": {
+          "name": "quantity6",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity65": {
+          "name": "quantity65",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity7": {
+          "name": "quantity7",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity75": {
+          "name": "quantity75",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity8": {
+          "name": "quantity8",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity85": {
+          "name": "quantity85",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity9": {
+          "name": "quantity9",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity95": {
+          "name": "quantity95",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity100": {
+          "name": "quantity100",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity105": {
+          "name": "quantity105",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity110": {
+          "name": "quantity110",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity115": {
+          "name": "quantity115",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity120": {
+          "name": "quantity120",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantitydefault": {
+          "name": "quantitydefault",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.orderusertable": {
+      "name": "orderusertable",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "orderid": {
+          "name": "orderid",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "username": {
+          "name": "username",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "receiverfirstname": {
+          "name": "receiverfirstname",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "receiverlastname": {
+          "name": "receiverlastname",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "receivermobile": {
+          "name": "receivermobile",
+          "type": "varchar(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "region": {
+          "name": "region",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "municity": {
+          "name": "municity",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "barangay": {
+          "name": "barangay",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "address": {
+          "name": "address",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "estatustype": {
+          "name": "estatustype",
+          "type": "estatustype",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "eoriginsite": {
+          "name": "eoriginsite",
+          "type": "eoriginsite",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "currentpayment": {
+          "name": "currentpayment",
+          "type": "numeric(10, 2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "downpayment": {
+          "name": "downpayment",
+          "type": "numeric(10, 2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "totalcost": {
+          "name": "totalcost",
+          "type": "numeric(10, 2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "orderdate": {
+          "name": "orderdate",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.producttable": {
+      "name": "producttable",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "productid": {
+          "name": "productid",
+          "type": "serial",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "name": "title",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "price": {
+          "name": "price",
+          "type": "numeric(10, 2)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "expense": {
+          "name": "expense",
+          "type": "numeric(10, 2)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'0.00'"
+        },
+        "expected": {
+          "name": "expected",
+          "type": "numeric(10, 2)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'0.00'"
+        },
+        "earning": {
+          "name": "earning",
+          "type": "numeric(10, 2)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'0.00'"
+        },
+        "isshow": {
+          "name": "isshow",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "image": {
+          "name": "image",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "imageone": {
+          "name": "imageone",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "imagetwo": {
+          "name": "imagetwo",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "imagethree": {
+          "name": "imagethree",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ecategorytype": {
+          "name": "ecategorytype",
+          "type": "ecategorytype",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'others'"
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "searchtag": {
+          "name": "searchtag",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "orders": {
+          "name": "orders",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "successorders": {
+          "name": "successorders",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pendingorders": {
+          "name": "pendingorders",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantityxxs": {
+          "name": "quantityxxs",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantityxs": {
+          "name": "quantityxs",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantitys": {
+          "name": "quantitys",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantitym": {
+          "name": "quantitym",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantityl": {
+          "name": "quantityl",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantityxl": {
+          "name": "quantityxl",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantityxxl": {
+          "name": "quantityxxl",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity5": {
+          "name": "quantity5",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity55": {
+          "name": "quantity55",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity6": {
+          "name": "quantity6",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity65": {
+          "name": "quantity65",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity7": {
+          "name": "quantity7",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity75": {
+          "name": "quantity75",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity8": {
+          "name": "quantity8",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity85": {
+          "name": "quantity85",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity9": {
+          "name": "quantity9",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity95": {
+          "name": "quantity95",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity100": {
+          "name": "quantity100",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity105": {
+          "name": "quantity105",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity110": {
+          "name": "quantity110",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity115": {
+          "name": "quantity115",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity120": {
+          "name": "quantity120",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantitydefault": {
+          "name": "quantitydefault",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "regdate": {
+          "name": "regdate",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "producttable_productid_unique": {
+          "name": "producttable_productid_unique",
+          "nullsNotDistinct": false,
+          "columns": ["productid"]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.usertable": {
+      "name": "usertable",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "userid": {
+          "name": "userid",
+          "type": "serial",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "firstname": {
+          "name": "firstname",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "middlename": {
+          "name": "middlename",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lastname": {
+          "name": "lastname",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "username": {
+          "name": "username",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "name": "password",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "salt": {
+          "name": "salt",
+          "type": "char(5)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "''"
+        },
+        "mobile": {
+          "name": "mobile",
+          "type": "varchar(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "token": {
+          "name": "token",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "''"
+        },
+        "eaccounttype": {
+          "name": "eaccounttype",
+          "type": "eaccounttype",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'customer'"
+        },
+        "regdate": {
+          "name": "regdate",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lastdate": {
+          "name": "lastdate",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lastip": {
+          "name": "lastip",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lastdevice": {
+          "name": "lastdevice",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lastlocation": {
+          "name": "lastlocation",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "usertable_userid_unique": {
+          "name": "usertable_userid_unique",
+          "nullsNotDistinct": false,
+          "columns": ["userid"]
+        },
+        "usertable_username_unique": {
+          "name": "usertable_username_unique",
+          "nullsNotDistinct": false,
+          "columns": ["username"]
+        },
+        "usertable_email_unique": {
+          "name": "usertable_email_unique",
+          "nullsNotDistinct": false,
+          "columns": ["email"]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.eaccounttype": {
+      "name": "eaccounttype",
+      "schema": "public",
+      "values": ["customer", "admin"]
+    },
+    "public.ecategorytype": {
+      "name": "ecategorytype",
+      "schema": "public",
+      "values": ["bags", "shoes", "clothes", "jewelry", "watches", "others"]
+    },
+    "public.eoriginsite": {
+      "name": "eoriginsite",
+      "schema": "public",
+      "values": ["facebook", "shoppee", "chicberry"]
+    },
+    "public.estatustype": {
+      "name": "estatustype",
+      "schema": "public",
+      "values": ["pending", "ondelivery", "success"]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
