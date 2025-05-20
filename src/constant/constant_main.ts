@@ -1,7 +1,7 @@
 import { IResponseCode } from "@/types/main_schema";
 
 export enum EParamsDefault {
-          IPAddress="http://192.168.254.122"
+            IPAddress="http://192.168.254.122"
 }
 
 export enum ERequestStatus {
