@@ -21,6 +21,7 @@ import {
   WidthType,
 } from "docx";
 import { Buffer } from "buffer";
+import { EParamsDefault } from "@/constant/constant_main";
 
 const v9_generate_barcode = async (
   req: Request<{}, {}, TParamsGenerateBarcode>,
@@ -84,7 +85,7 @@ const v9_generate_barcode = async (
     try {
       qrBuffer = await BwipJs.toBuffer({
         bcid: "qrcode",
-        text: `http://192.168.254.135:3001/v9/barcode_additem?productid=${productid}&sizecategory=${sizecategory}&itemid=${itemLoggedId}`,
+        text: `${EParamsDefault.IPAddress}:3001/v9/barcode_additem?productid=${productid}&sizecategory=${sizecategory}&itemid=${itemLoggedId}`,
         scale: 5,
         height: 10,
         width: 10,

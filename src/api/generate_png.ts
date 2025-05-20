@@ -8,6 +8,7 @@ import {
   import BwipJs from "bwip-js";
   import { and, eq } from "drizzle-orm";
   import { ProductTable } from "@/config/drizzle/tables/table_product";
+import { EParamsDefault } from "@/constant/constant_main";
   
   const v9_generate_barcode = async (
     req: Request<{}, {}, TParamsGenerateBarcode>,
@@ -56,7 +57,7 @@ import {
     BwipJs.toBuffer(
       {
         bcid: "qrcode", // Change to QR code
-        text: `http://192.168.254.135:3001/v9/barcode_additem?productid=${productid}&sizecategory=${sizecategory}&itemid=${itemLoggedId}`, // The text or URL you want to encode
+        text: `${EParamsDefault.IPAddress}:3001/v9/barcode_additem?productid=${productid}&sizecategory=${sizecategory}&itemid=${itemLoggedId}`, // The text or URL you want to encode
         scale: 5, // Adjust size as needed
         height: 10, // Height is less relevant for QR codes
         width: 10,
