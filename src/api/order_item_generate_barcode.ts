@@ -26,6 +26,7 @@ import {
 } from "docx";
 import { Buffer } from "buffer";
 import { OrderUserTable } from "@/config/drizzle/tables/table_orderuser";
+import { EParamsDefault } from "@/constant/constant_main";
 
 const quantityMap: Record<string, string> = {
   quantityxxs: "XXS",
@@ -128,7 +129,7 @@ const v9_order_item_generate_barcode = async (
         try {
           const qrBuffer = await BwipJs.toBuffer({
             bcid: "qrcode",
-            text: `http://192.168.254.135:3001/v9/barcode_orderitem?productid=${order.productid}&sizecategory=${field}&itemid=${itemId}&orderid=${order.orderid}`,
+            text: `${EParamsDefault.IPAddress}:3001/v9/barcode_orderitem?productid=${order.productid}&sizecategory=${field}&itemid=${itemId}&orderid=${order.orderid}`,
             scale: 5,
             height: 10,
             width: 10,

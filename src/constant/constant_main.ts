@@ -1,5 +1,9 @@
 import { IResponseCode } from "@/types/main_schema";
 
+export enum EParamsDefault {
+  IPAddress="http://192.168.254.135"
+}
+
 export enum ERequestStatus {
   Success = 200,
   InvalidField = 400,
