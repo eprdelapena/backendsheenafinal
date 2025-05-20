@@ -171,10 +171,11 @@ const v9_order_item_generate_barcode = async (
           return new TableCell({
             children: [
               new Paragraph({ children: [images[idx]], alignment: AlignmentType.CENTER }),
-              new Paragraph({ text: `QR ID: ${info.id}`, alignment: AlignmentType.CENTER }),
-              new Paragraph({ text: `Product name: ${info.title}`, alignment: AlignmentType.CENTER }),
+              // new Paragraph({ text: `QR ID: ${info.id} ✓`, alignment: AlignmentType.CENTER }),
+              new Paragraph({ text: `${info.title}`, alignment: AlignmentType.CENTER }),
               new Paragraph({ text: `Size: ${info.size}`, alignment: AlignmentType.CENTER }),
               new Paragraph({ text: `Order ID: ${info.orderid}`, alignment: AlignmentType.CENTER }),
+               new Paragraph({ text: `OUTGOING`, alignment: AlignmentType.CENTER }),
             ],
             width: { size: 33.33, type: WidthType.PERCENTAGE },
             verticalAlign: VerticalAlign.CENTER,
